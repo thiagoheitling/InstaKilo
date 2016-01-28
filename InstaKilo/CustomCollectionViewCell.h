@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class Photo;
+
 @interface CustomCollectionViewCell : UICollectionViewCell
+
+@property (weak, nonatomic) Photo *photo;
+
+//-(void)configureWithObject:(Photo *)photo;
+
+
+-(void)setObject:(Photo *)photo;
+
 
 @end

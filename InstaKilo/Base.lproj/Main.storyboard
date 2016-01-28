@@ -13,34 +13,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gr4-Fn-hP9">
-                            <size key="itemSize" width="100" height="70"/>
-                            <size key="headerReferenceSize" width="0.0" height="30"/>
+                            <size key="itemSize" width="300" height="300"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="FNf-jr-lBj" customClass="CustomCollectionViewCell">
-                                <rect key="frame" x="0.0" y="40" width="100" height="70"/>
+                                <rect key="frame" x="150" y="10" width="300" height="300"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="100" height="70"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KDv-y9-OQh">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                            <color key="backgroundColor" red="0.97625572643979053" green="0.26914932269887493" blue="0.91286900291267226" alpha="1" colorSpace="calibratedRGB"/>
+                                        </imageView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="KDv-y9-OQh" firstAttribute="top" secondItem="FNf-jr-lBj" secondAttribute="top" id="Xs7-E4-WEp"/>
+                                    <constraint firstAttribute="bottom" secondItem="KDv-y9-OQh" secondAttribute="bottom" id="duO-Wj-NxM"/>
+                                    <constraint firstItem="KDv-y9-OQh" firstAttribute="leading" secondItem="FNf-jr-lBj" secondAttribute="leading" id="oR6-9y-hZB"/>
+                                    <constraint firstAttribute="trailing" secondItem="KDv-y9-OQh" secondAttribute="trailing" id="v5F-EL-jUF"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellImageView" destination="KDv-y9-OQh" id="hhk-sp-RYC"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="zCm-Hk-jYg">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="30"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
                         <connections>
                             <outlet property="dataSource" destination="e8Q-nS-dBS" id="Smd-Gm-yhT"/>
                             <outlet property="delegate" destination="e8Q-nS-dBS" id="A2E-l5-oku"/>
                         </connections>
                     </collectionView>
-                    <connections>
-                        <outlet property="collectionView" destination="j6A-ig-kPO" id="i8y-J3-laO"/>
-                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Ki-mU-3vl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
